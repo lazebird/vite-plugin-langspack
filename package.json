@@ -1,5 +1,5 @@
 {
-  "name": "@lazebird/vue3template",
+  "name": "@lazebird/vite-plugin-langspack",
   "version": "0.0.1",
   "keywords": [
     "vue3",
@@ -8,18 +8,18 @@
   "author": "lazebird",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lazebird/vue3template/issues"
+    "url": "https://github.com/lazebird/vite-plugin-langspack/issues"
   },
-  "homepage": "https://github.com/lazebird/vue3template",
+  "homepage": "https://github.com/lazebird/vite-plugin-langspack",
   "files": [
     "dist"
   ],
-  "main": "./dist/vue3template.umd.js",
-  "module": "./dist/vue3template.es.js",
+  "main": "./dist/vite-plugin-langspack.umd.js",
+  "module": "./dist/vite-plugin-langspack.es.js",
   "exports": {
     ".": {
-      "import": "./dist/vue3template.es.js",
-      "require": "./dist/vue3template.umd.js"
+      "import": "./dist/vite-plugin-langspack.es.js",
+      "require": "./dist/vite-plugin-langspack.umd.js"
     }
   },
   "private": false,

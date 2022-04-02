@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 import Components from 'unplugin-vue-components/vite';
+import vitePluginLangspack from './src/components/langspack/index';
 
 import visualizer from 'rollup-plugin-visualizer';
 const plugins = [];
@@ -13,9 +14,9 @@ function pathResolve(dir: string) {
 
 const buildlib = {
   lib: {
-    entry: pathResolve('src/components/toc/index.js'),
-    name: 'vue3outline',
-    fileName: (format) => `vue3outline.${format}.js`,
+    entry: pathResolve('src/components/langspack/index.ts'),
+    name: 'vite-plugin-langspack',
+    fileName: (format) => `vite-plugin-langspack.${format}.js`,
   },
   sourcemap: true,
   rollupOptions: {
@@ -26,6 +27,7 @@ const buildlib = {
 const builddemo = {};
 
 export default defineConfig(({ command, mode }) => {
+  if (mode === 'demo') plugins.push(vitePluginLangspack([{ src: pathResolve('langs/zh_CN'), dst: pathResolve('public/zh_CN.json'), include: /.json$/ }]));
   console.log('[vite.config.ts] command %s mode %s', command, mode);
   return {
     base: './',
