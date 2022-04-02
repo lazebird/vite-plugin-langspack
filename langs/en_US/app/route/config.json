@@ -1,0 +1,6 @@
+{
+    "config": "Configuration",
+    "port": "Port",
+    "vlan": "VLAN",
+    "erps": "ERPS"
+}

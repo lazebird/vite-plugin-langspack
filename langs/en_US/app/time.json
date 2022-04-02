@@ -1,0 +1,7 @@
+{
+  "title": "Time Management",
+  "clock": "Clock",
+  "zone": "Time Zone",
+  "ntp_enable": "Enable NTP",
+  "ntp_srv": "NTP Server"
+}

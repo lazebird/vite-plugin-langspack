@@ -1,0 +1,23 @@
+{
+  "title": "端口安全",
+  "portconf": "端口配置",
+  "portstate": "端口状态",
+  "macstate": "MAC状态",
+  "name": "名称",
+  "state": "状态",
+  "max_mac_num": "最大MAC数",
+  "sticky": "Sticky",
+  "aging_time": "老化时间(分钟)",
+  "aging_static": "老化静态地址",
+  "violation_mode": "违例模式",
+  "macconf": "MAC配置",
+  "mac": "MAC地址",
+  "type": "类型",
+  "total_mac_num": "总共MAC数",
+  "conf_mac_num": "配置MAC数",
+  "violation_count": "违例数",
+  "last_violation_mac": "上次违例MAC",
+  "last_violation_stamp": "上次违例时间",
+  "vid": "VID",
+  "aging": "剩余老化时间(秒)"
+}

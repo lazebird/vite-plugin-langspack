@@ -1,0 +1,12 @@
+{
+    "vlan": "VLAN配置",
+    "trunk": "Trunk口配置",
+    "name": "名称",
+    "type": "类型",
+    "member": "成员",
+    "pvid": "PVID",
+    "nativevlan": "Native VLAN",
+    "allowvlans": "Allow VLANs",
+    "config": "配置",
+    "mode": "模式"
+}

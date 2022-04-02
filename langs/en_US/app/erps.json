@@ -1,0 +1,20 @@
+{
+    "erps": "ERPS",
+    "config": " ERPS Configuration",
+    "revert": "Revert",
+    "name": "Name",
+    "ringid": "Ring ID",
+    "state": "State",
+    "lastevt": "Last Event",
+    "east": "East Interface",
+    "west": "West Interface",
+    "id": "ID",
+    "level": "Level",
+    "rapsvlan": "RAPS VLAN",
+    "ownerif": "Owner Interface",
+    "subringif": "Subring Block Interface",
+    "attachinst": "Attached Instance",
+    "erpsstate": "ERPS State",
+    "instconf": "Instance Configuration",
+    "ringconf": "Ring Configuration"
+}

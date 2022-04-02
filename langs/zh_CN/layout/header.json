@@ -1,0 +1,14 @@
+{
+    "dropdownItemDoc": "文档",
+    "dropdownItemLoginOut": "退出",
+    "dropdownItemReboot": "重启",
+    "tooltipErrorLog": "日志",
+    "tooltipLock": "锁屏",
+    "tooltipNotify": "通知",
+    "tooltipEntryFull": "全屏",
+    "tooltipExitFull": "退出全屏",
+    "lockScreenPassword": "锁屏密码",
+    "lockScreen": "锁定屏幕",
+    "lockScreenBtn": "锁定",
+    "home": "首页"
+}

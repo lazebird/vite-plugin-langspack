@@ -1,0 +1,7 @@
+{
+  "title": "时间管理",
+  "clock": "时钟",
+  "zone": "时区",
+  "ntp_enable": "启用NTP",
+  "ntp_srv": "NTP服务器"
+}

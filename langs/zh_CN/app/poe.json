@@ -1,0 +1,18 @@
+{
+  "title": "PoE",
+  "globalconf": "全局配置",
+  "supply": "最大功率(W)",
+  "consume": "消耗功率(W)",
+  "alg": "供电管理",
+  "disc_mode": "断开模式",
+  "powered_ports": "供电端口数",
+  "legacy": "兼容模式",
+  "portconf": "端口配置",
+  "name": "名称",
+  "admin_state": "管理状态",
+  "state": "状态",
+  "reason": "原因",
+  "class": "分类",
+  "icut": "电流(mA)",
+  "power": "功率(W) "
+}

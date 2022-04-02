@@ -1,0 +1,15 @@
+{
+  "title": "IP Source Guard",
+  "portconf": "Port Configuration",
+  "name": "Name",
+  "portstate": "Port State",
+  "verify_src": "Verify Source",
+  "arp_check": "ARP Check",
+  "userconf": "User Configuration",
+  "userstate": "User State",
+  "vid": "VID",
+  "ip": "IP Address",
+  "mac": "MAC Address",
+  "lease": "Lease",
+  "type": "Type"
+}

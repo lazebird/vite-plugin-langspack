@@ -1,0 +1,18 @@
+{
+  "title": "Dot1X",
+  "globalconf": "全局配置",
+  "state": "状态",
+  "portconf": "端口配置",
+  "name": "名称",
+  "control": "端口受控",
+  "version": "协议版本",
+  "quiet_period": "静默时间(秒)",
+  "tx_period": "发送周期(秒)",
+  "reauth_enable": "使能重认证",
+  "reauth_period": "重认证周期(秒)",
+  "supp_tout": "客户端超时(秒)",
+  "srv_tout": "服务器超时(秒)",
+  "portstate": "端口状态",
+  "pae_state": "PAE状态",
+  "radconf": "RADIUS配置"
+}

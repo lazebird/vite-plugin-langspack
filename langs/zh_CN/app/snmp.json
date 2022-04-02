@@ -1,0 +1,10 @@
+{
+  "title": "SNMP",
+  "version": "版本",
+  "location": "位置",
+  "community": "团体字",
+  "encrypt_pwd": "加密密码",
+  "auth_pwd": "认证密码",
+  "trap_community": "Trap团体字",
+  "hosts": "Trap主机"
+}

@@ -1,0 +1,20 @@
+{
+    "erps": "ERPS",
+    "config": " ERPS配置",
+    "revert": "回切",
+    "name": "名称",
+    "ringid": "环ID",
+    "state": "状态",
+    "lastevt": "上次事件",
+    "east": "东接口",
+    "west": "西接口",
+    "id": "ID",
+    "level": "级别",
+    "rapsvlan": "RAPS VLAN",
+    "ownerif": "Owner接口",
+    "subringif": "子环阻断口",
+    "attachinst": "关联实例",
+    "erpsstate": "ERPS状态",
+    "instconf": "实例配置",
+    "ringconf": "环配置"
+}

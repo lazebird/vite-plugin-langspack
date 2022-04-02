@@ -1,0 +1,18 @@
+{
+  "title": "PoE",
+  "globalconf": "Global Configuration",
+  "supply": "Power supply(W)",
+  "consume": "Power consume(W)",
+  "alg": "Power management",
+  "disc_mode": "Disconnect mode",
+  "powered_ports": "Powered ports",
+  "legacy": "Legacy Mode",
+  "portconf": "Port Configuration",
+  "name": "Name",
+  "admin_state": "Admin State",
+  "state": "State",
+  "reason": "Reason",
+  "class": "Class",
+  "icut": "Icut(mA)",
+  "power": "Power(W) "
+}

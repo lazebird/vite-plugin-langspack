@@ -1,0 +1,12 @@
+{
+  "title": "RADIUS",
+  "globalconf": "全局配置",
+  "key": "密钥",
+  "tout": "超时(秒)",
+  "deadtime": "死亡时间(分钟)",
+  "retry": "重传",
+  "srvconf": "服务器配置",
+  "srvstate": "服务器状态",
+  "ip": "IP",
+  "auth_port": "认证端口"
+}

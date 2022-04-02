@@ -1,0 +1,15 @@
+{
+  "title": "IP Source Guard",
+  "portconf": "端口配置",
+  "name": "名称",
+  "portstate": "端口状态",
+  "verify_src": "Verify Source",
+  "arp_check": "ARP Check",
+  "userconf": "用户配置",
+  "userstate": "用户状态",
+  "vid": "VID",
+  "ip": "IP地址",
+  "mac": "MAC地址",
+  "lease": "租约",
+  "type": "类型"
+}

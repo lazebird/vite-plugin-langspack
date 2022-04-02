@@ -1,0 +1,12 @@
+{
+    "vlan": "VLAN Configuration",
+    "trunk": "Trunk Configuration",
+    "name": "Name",
+    "type": "Type",
+    "member": "Member",
+    "pvid": "PVID",
+    "nativevlan": "Native VLAN",
+    "allowvlans": "Allow VLANs",
+    "config": "Configuration",
+    "mode": "Mode"
+}

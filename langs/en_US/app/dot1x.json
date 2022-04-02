@@ -1,0 +1,18 @@
+{
+  "title": "Dot1X",
+  "globalconf": "Global Configuration",
+  "state": "State",
+  "portconf": "Port Configuration",
+  "name": "Name",
+  "control": "Port Control",
+  "version": "Protocol Version",
+  "quiet_period": "Quiet Period(s)",
+  "tx_period": "Tx Period(s)",
+  "reauth_enable": "ReAuth Enabled",
+  "reauth_period": "ReAuth Period(s)",
+  "supp_tout": "Supp Timeout(s)",
+  "srv_tout": "Server Timeout(s)",
+  "portstate": "Port State",
+  "pae_state": "PAE State",
+  "radconf": "RADIUS Configuration"
+}

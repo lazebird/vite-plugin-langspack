@@ -1,0 +1,13 @@
+{
+  "title": "MAC Auth",
+  "globalconf": "Global Configuration",
+  "state": "State",
+  "portconf": "Port Configuration",
+  "portstate": "Port State",
+  "name": "Name",
+  "aging": "MAC Address Aging",
+  "vid": "VID",
+  "mac": "MAC",
+  "timestamp": "Timestamp",
+  "radconf": "RADIUS Configuration"
+}

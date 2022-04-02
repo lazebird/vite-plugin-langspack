@@ -1,0 +1,10 @@
+{
+  "title": "IO控制",
+  "input": "输入",
+  "state": "状态",
+  "id": "ID",
+  "desc": "描述",
+  "level": "状态",
+  "output": "输出",
+  "level_def": "默认状态"
+}

@@ -1,0 +1,10 @@
+{
+  "title": "SNMP",
+  "version": "Version",
+  "location": "Location",
+  "community": "Community",
+  "encrypt_pwd": "Encrypt Password",
+  "auth_pwd": "Authentication Password",
+  "trap_community": "Trap Community",
+  "hosts": "Trap Hosts"
+}

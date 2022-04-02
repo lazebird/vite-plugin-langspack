@@ -1,0 +1,12 @@
+{
+  "title": "RADIUS",
+  "globalconf": "Global Configuration",
+  "key": "Key",
+  "tout": "Timeout(s)",
+  "deadtime": "Dead Time(min.)",
+  "retry": "Retransmission",
+  "srvconf": "Server Configuration",
+  "srvstate": "Server State",
+  "ip": "IP",
+  "auth_port": "Auth Port"
+}

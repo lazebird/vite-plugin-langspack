@@ -1,0 +1,10 @@
+{
+  "title": "IO Control",
+  "input": "Input",
+  "state": "State",
+  "id": "ID",
+  "desc": "Description",
+  "level": "Status",
+  "output": "Output",
+  "level_def": "Default Status"
+}

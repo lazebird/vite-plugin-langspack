@@ -1,0 +1,13 @@
+{
+  "title": "MAC认证",
+  "globalconf": "全局配置",
+  "state": "状态",
+  "portconf": "端口配置",
+  "portstate": "端口状态",
+  "name": "名称",
+  "aging": "MAC地址老化",
+  "vid": "VID",
+  "mac": "MAC",
+  "timestamp": "时间戳",
+  "radconf": "RADIUS配置"
+}
