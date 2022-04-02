@@ -1,0 +1,71 @@
+{
+  "name": "@lazebird/vue3template",
+  "version": "0.0.1",
+  "keywords": [
+    "vue3",
+    "vite"
+  ],
+  "author": "lazebird",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lazebird/vue3template/issues"
+  },
+  "homepage": "https://github.com/lazebird/vue3template",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue3template.umd.js",
+  "module": "./dist/vue3template.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue3template.es.js",
+      "require": "./dist/vue3template.umd.js"
+    }
+  },
+  "private": false,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "demo": "vue-tsc --noEmit && vite build --mode demo",
+    "preview": "vite preview",
+    "report": "cross-env REPORT=true npm run build",
+    "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
+    "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
+    "lint:stylelint": "stylelint --cache --fix \"**/*.{less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "vue": "^3.2.31"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@types/node": "^17.0.19",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "@vitejs/plugin-vue": "^2.2.2",
+    "@vue/compiler-sfc": "^3.2.31",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.9.0",
+    "eslint-define-config": "^1.2.5",
+    "eslint-plugin-vue": "^8.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1",
+    "rollup": "^2.68.0",
+    "rollup-plugin-visualizer": "^5.5.4",
+    "stylelint": "^14.5.2",
+    "stylelint-config-standard": "^25.0.0",
+    "typescript": "^4.5.5",
+    "unplugin-vue-components": "^0.17.20",
+    "vite": "^2.8.4",
+    "vue-eslint-parser": "^8.3.0",
+    "vue-tsc": "^0.31.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

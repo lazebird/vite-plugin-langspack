@@ -1,0 +1,22 @@
+name: deploy demo to gh-pages
+on:
+  push:
+    branches: [develop]
+    paths: [package.json]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Install and Build 🔧
+        run: |
+          npm install -g pnpm && pnpm install && pnpm run demo
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: gh-pages
+          folder: dist
