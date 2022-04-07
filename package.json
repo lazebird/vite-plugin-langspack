@@ -37,7 +37,6 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
-    "chokidar": "^3.5.3",
     "vue": "^3.2.31"
   },
   "devDependencies": {

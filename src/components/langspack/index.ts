@@ -1,9 +1,8 @@
-import type { Plugin } from 'vite';
+import type { Plugin, ViteDevServer } from 'vite';
 import type { LangspackOpt, LangOpt } from '#/plugin';
 import { basename, dirname, resolve } from 'path';
 import { dir2files, file2content, file2obj, obj2file, unlink } from '../../api/fsUtil';
 import * as Log from './log';
-import { createWatch } from './watch';
 
 const genTmpJsUri = (path: string) => basename(path) + '.tmp.js';
 const genJsonUri = (path: string) => '/' + basename(path);
@@ -20,6 +19,7 @@ const getData = async (uri) => {\
 export default getData('XXX_URI').then((d) => d);\
 ";
 let localData: any = {};
+let server: ViteDevServer;
 
 function collectData(langs: LangOpt[], mode: string) {
   const data: any = {};
@@ -31,7 +31,18 @@ function collectData(langs: LangOpt[], mode: string) {
     if (mode !== 'development') obj2file(lang.dst, data[lang.name]);
   }
   Log.debug('update localData ', JSON.stringify(data));
+  reload(langs);
   return data;
+}
+function reload(langs: LangOpt[]) {
+  if (!server) return;
+  const { moduleGraph, ws } = server;
+  for (const lang of langs) {
+    const module = moduleGraph.getModuleById(genTmpJsUri(lang.dst));
+    if (module) moduleGraph.invalidateModule(module);
+  }
+  ws.send({ type: 'full-reload' });
+  Log.info('reloading');
 }
 
 export default function langspack(opt: LangspackOpt): Plugin {
@@ -44,7 +55,6 @@ export default function langspack(opt: LangspackOpt): Plugin {
     buildStart() {
       Log.debug('vite-plugin-langspack started, opt %s', JSON.stringify(opt));
       localData = collectData(langOpts, mode);
-      createWatch(opt, () => (localData = collectData(langOpts, mode)));
     },
     closeBundle() {
       if (mode !== 'development') for (const lang of langOpts) unlink(lang.dst);
@@ -69,6 +79,12 @@ export default function langspack(opt: LangspackOpt): Plugin {
         }
       }
       return null;
+    },
+    configureServer(_server: ViteDevServer) {
+      server = _server;
+    },
+    handleHotUpdate() {
+      localData = collectData(langOpts, mode);
     },
   };
 }
