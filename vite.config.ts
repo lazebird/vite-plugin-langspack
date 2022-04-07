@@ -27,12 +27,16 @@ const buildlib = {
 const builddemo = {};
 
 export default defineConfig(({ command, mode }) => {
-  if (mode === 'demo')
+  if (mode !== 'build')
     plugins.push(
-      vitePluginLangspack([
-        { src: pathResolve('langs/zh_CN'), dst: pathResolve('public/zh_CN.json'), include: /.json$/ },
-        { src: pathResolve('langs/en_US'), dst: pathResolve('public/en_US.json'), include: /.json$/ },
-      ]),
+      vitePluginLangspack({
+        langs: [
+          { src: pathResolve('langs/zh_CN'), dst: pathResolve('public/zh_CN.json'), include: /.json$/ },
+          { src: pathResolve('langs/en_US'), dst: pathResolve('public/en_US.json'), include: /.json$/ },
+        ],
+        logLevel: 6,
+        mode,
+      }),
     );
   console.log('[vite.config.ts] command %s, mode %s, plugins %s', command, mode, JSON.stringify(plugins));
   return {

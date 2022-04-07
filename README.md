@@ -6,6 +6,3 @@
 - <a href="https://lazebird.github.io/vite-plugin-langspack/" target="_blank">预览</a>
 
 # Todo
-
-- [ ] 调试支持
-- [ ] 开发模式下的目录导入处理

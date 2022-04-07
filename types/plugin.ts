@@ -1,7 +1,12 @@
-export interface LangspackOpt {
+interface Langs {
   mode: string;
   src: string;
   dst: string;
+}
+export interface LangspackOpt {
+  langs: Langs[];
+  logLevel?: number;
+  mode?: string;
 }
 
 export interface JsonFile {
