@@ -20,8 +20,8 @@ const buildlib = {
   },
   sourcemap: true,
   rollupOptions: {
-    external: ['vue'],
-    output: { globals: { vue: 'Vue' } },
+    external: ['vue', 'fs', 'path'],
+    output: { globals: { vue: 'Vue', fs: 'fs', path: 'path' } },
   },
 };
 const builddemo = {};
