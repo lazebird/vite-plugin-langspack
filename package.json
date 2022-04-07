@@ -36,6 +36,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "axios": "^0.26.1",
+    "path": "^0.12.7",
     "vue": "^3.2.31"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pkg">
     <label>Home: </label><a :href="homepage" target="_blank">{{ name }} {{ version }}</a> <label>License: </label>{{ license }}
   </div>
 </template>
@@ -10,6 +10,9 @@
   document.title = name;
 </script>
 <style scoped>
+  .pkg {
+    text-align: center;
+  }
   label {
     margin-left: 20px;
   }

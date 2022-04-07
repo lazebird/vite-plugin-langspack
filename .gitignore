@@ -6,5 +6,4 @@ dist-ssr
 .eslintcache
 .pnpm-debug.log
 components.d.ts
-public/*.json
 

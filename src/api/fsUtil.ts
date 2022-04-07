@@ -34,4 +34,6 @@ function file2obj(file: JsonFile, parent: any) {
 }
 const obj2file = (path: string, obj: any) => fs.writeFileSync(path, JSON.stringify(obj, null, 2));
 
-export { file2content, dir2files, file2obj, obj2file };
+const unlink = (path: string) => fs.unlinkSync(path);
+
+export { file2content, dir2files, file2obj, obj2file, unlink };
