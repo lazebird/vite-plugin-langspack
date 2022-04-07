@@ -36,6 +36,7 @@ export default defineConfig(({ command, mode }) => {
         ],
         logLevel: 6,
         mode,
+        rootDir: pathResolve('.'),
       }),
     );
   console.log('[vite.config.ts] command %s, mode %s, plugins %s', command, mode, JSON.stringify(plugins));

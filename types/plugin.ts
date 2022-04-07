@@ -1,10 +1,12 @@
-interface Langs {
+export interface LangOpt {
   mode: string;
   src: string;
   dst: string;
+  name: string;
 }
 export interface LangspackOpt {
-  langs: Langs[];
+  langs: LangOpt[];
+  rootDir: string;
   logLevel?: number;
   mode?: string;
 }
