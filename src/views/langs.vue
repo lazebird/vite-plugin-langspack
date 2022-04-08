@@ -18,7 +18,7 @@
 
   const msgs = ref({});
   async function refresh() {
-    const data = await (await import(`../../langs/${locale.value}.ts`))?.default;
+    const data = await (await import(`../../langs/${locale.value}`))?.default;
     console.log(JSON.stringify(data));
     msgs.value = data;
   }
