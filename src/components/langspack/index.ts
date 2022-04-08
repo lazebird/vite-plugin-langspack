@@ -83,8 +83,10 @@ export default function langspack(opt: LangspackOpt): Plugin {
     configureServer(_server: ViteDevServer) {
       server = _server;
     },
-    handleHotUpdate() {
-      localData = collectData(langOpts, mode);
+    handleHotUpdate(ctx) {
+      let need_reload = false;
+      for (const lang of langOpts) if (ctx.file.includes(lang.src)) need_reload = true;
+      if (need_reload) localData = collectData(langOpts, mode);
     },
   };
 }

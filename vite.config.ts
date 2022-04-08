@@ -34,7 +34,7 @@ export default defineConfig(({ command, mode }) => {
           { src: pathResolve('langs/zh_CN'), dst: pathResolve('public/zh_CN.json'), include: /.json$/ },
           { src: pathResolve('langs/en_US'), dst: pathResolve('public/en_US.json'), include: /.json$/ },
         ],
-        logLevel: 4,
+        logLevel: 6,
         mode,
         rootDir: pathResolve('.'),
       }),

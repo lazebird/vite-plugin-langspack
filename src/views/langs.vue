@@ -19,7 +19,7 @@
   const msgs = ref({});
   async function refresh() {
     const data = await (await import(`../../langs/${locale.value}`))?.default;
-    console.log(JSON.stringify(data));
+    // console.log(JSON.stringify(data));
     msgs.value = data;
   }
   onMounted(refresh);
