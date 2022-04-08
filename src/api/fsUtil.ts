@@ -22,6 +22,12 @@ function dir2files({ dir, include, exclude }: LoadOpt) {
   return data;
 }
 
+function getSubdirs(dir: string) {
+  if (!fs.statSync(dir)?.isDirectory()) return [];
+  const data = fs.readdirSync(dir).map((file) => path.resolve(dir, file));
+  return data.filter((f) => fs.statSync(f).isDirectory());
+}
+
 function file2obj(file: JsonFile, parent: any) {
   const extname = path.extname(file.path);
   if (file.path.slice(-extname.length) !== extname) return;
@@ -36,4 +42,4 @@ const obj2file = (path: string, obj: any) => fs.writeFileSync(path, JSON.stringi
 
 const unlink = (path: string) => fs.unlinkSync(path);
 
-export { file2content, dir2files, file2obj, obj2file, unlink };
+export { file2content, dir2files, getSubdirs, file2obj, obj2file, unlink };

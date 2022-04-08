@@ -4,10 +4,14 @@ export interface LangOpt {
   dst: string;
   name: string;
 }
-export interface LangspackOpt {
-  langs: LangOpt[];
-  rootDir: string;
+export interface LogConf {
   logLevel?: number;
+  logFilters?: string[];
+  maxLen?: number;
+}
+export interface LangspackOpt {
+  lang: LangOpt;
+  log?: LogConf;
   mode?: string;
 }
 

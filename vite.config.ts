@@ -30,13 +30,9 @@ export default defineConfig(({ command, mode }) => {
   if (mode !== 'build')
     plugins.push(
       vitePluginLangspack({
-        langs: [
-          { src: pathResolve('langs/zh_CN'), dst: pathResolve('public/zh_CN.json'), include: /.json$/ },
-          { src: pathResolve('langs/en_US'), dst: pathResolve('public/en_US.json'), include: /.json$/ },
-        ],
-        logLevel: 6,
+        lang: { src: pathResolve('langs'), dst: pathResolve('public'), include: /.json$/ },
+        log: { level: 6, filters: ['/node_modules/'], maxLen: 200 },
         mode,
-        rootDir: pathResolve('.'),
       }),
     );
   console.log('[vite.config.ts] command %s, mode %s, plugins %s', command, mode, JSON.stringify(plugins));

@@ -8,9 +8,11 @@
 
 # Todo
 
+- [ ] 去掉配置中的 mode 字段，简化配置
+
 # 问题
 
-## Unknown variable dynamic import
+## ~~Unknown variable dynamic import~~
 
 - import 默认需要实体文件，因此在项目 langs/目录存在 2 个空文件 zh_CN.js 和 en_US.js；否则插件不会处理该 import 资源
 - 且在外扩新语种时，比如 zh_TW，由于编译时 import 未处理该文件，也会导致出错，可选自行处理该问题，做法参考
