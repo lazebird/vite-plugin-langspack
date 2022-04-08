@@ -1,9 +1,12 @@
 {
   "name": "@lazebird/vite-plugin-langspack",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "keywords": [
     "vue3",
-    "vite"
+    "vite",
+    "plugin",
+    "i18n",
+    "locales"
   ],
   "author": "lazebird",
   "license": "MIT",

@@ -31,10 +31,9 @@ function collectData(langs: LangOpt[], mode: string) {
     if (mode !== 'development') obj2file(lang.dst, data[lang.name]);
   }
   Log.debug('update localData ', JSON.stringify(data));
-  reload(langs);
   return data;
 }
-function reload(langs: LangOpt[]) {
+function reload(langs: LangOpt[], cause: string) {
   if (!server) return;
   const { moduleGraph, ws } = server;
   for (const lang of langs) {
@@ -42,7 +41,7 @@ function reload(langs: LangOpt[]) {
     if (module) moduleGraph.invalidateModule(module);
   }
   ws.send({ type: 'full-reload' });
-  Log.info('reloading');
+  Log.info('reload cause: %s', cause);
 }
 
 export default function langspack(opt: LangspackOpt): Plugin {
@@ -86,7 +85,9 @@ export default function langspack(opt: LangspackOpt): Plugin {
     handleHotUpdate(ctx) {
       let need_reload = false;
       for (const lang of langOpts) if (ctx.file.includes(lang.src)) need_reload = true;
-      if (need_reload) localData = collectData(langOpts, mode);
+      if (!need_reload) return;
+      localData = collectData(langOpts, mode);
+      reload(langOpts, ctx.file);
     },
   };
 }
