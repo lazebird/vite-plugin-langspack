@@ -13,6 +13,7 @@
 ## 用法
 
 - 详细内容可以参考项目示例和源码；有问题请提 issue
+- 补充：对于不需要区分生产模式，只要直接打包语言文件的场景，可以在 vite.config.ts 中硬指定参数 mode='development'来实现
 
 ```
 // vite.config.ts
