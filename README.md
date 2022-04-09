@@ -6,13 +6,31 @@
 - <a href="https://lazebird.github.io/vite-plugin-langspack/" target="_blank">预览</a>
 - <a href="https://www.npmjs.com/package/@lazebird/vite-plugin-langspack" target="_blank">npmjs</a>
 
-# Todo
+## 安装
+
+- `pnpm i -D @lazebird/vite-plugin-langspack`
+
+## 用法
+
+- 详细内容可以参考项目示例和源码；有问题请提 issue
+
+```
+// vite.config.ts
+import vitePluginLangspack from '@lazebird/vite-plugin-langspack';
+vitePlugins.push(vitePluginLangspack({ lang: { src: pathResolve('langs'), dst: pathResolve('public'), include: /.json$/ }, log: { level: 6 } }));
+
+// 业务
+import getLocaleData from 'virtual:langs';
+const msgs = await getLocaleData(locale);
+```
+
+## Todo
 
 - [x] 去掉配置中的 mode 字段，简化配置
 
-# 问题
+## 问题
 
-## ~~Unknown variable dynamic import~~
+### ~~Unknown variable dynamic import~~
 
 - import 默认需要实体文件，因此在项目 langs/目录存在 2 个空文件 zh_CN.js 和 en_US.js；否则插件不会处理该 import 资源
 - 且在外扩新语种时，比如 zh_TW，由于编译时 import 未处理该文件，也会导致出错，可选自行处理该问题，做法参考

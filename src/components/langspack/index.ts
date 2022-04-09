@@ -30,7 +30,7 @@ function collectData(lang: LangOpt, mode: string) {
     const files = dir2files({ dir, ...lang });
     const fdata = files.map((f) => ({ path: f.slice(lang.src.length), data: JSON.parse(file2content(f)) }));
     data[name] = {};
-    for (const f of fdata) file2obj(f, data[name]);
+    for (const f of fdata) file2obj(f, data);
     if (mode !== 'development') {
       obj2file(`${lang.dst}/${name}.json`, data[name]);
       outputFiles = [...outputFiles, `${lang.dst}/${name}.json`];
