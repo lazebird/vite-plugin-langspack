@@ -32,7 +32,6 @@ export default defineConfig(({ command, mode }) => {
       vitePluginLangspack({
         lang: { src: pathResolve('langs'), dst: pathResolve('public'), include: /.json$/ },
         log: { level: 6, filters: ['/node_modules/'], maxLen: 200 },
-        mode,
       }),
     );
   console.log('[vite.config.ts] command %s, mode %s, plugins %s', command, mode, JSON.stringify(plugins));

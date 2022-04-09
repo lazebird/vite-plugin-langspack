@@ -1,7 +1,7 @@
 import { LogConf } from '#/plugin';
 
-let conf = { level: 4, filters: [], maxLen: 10000 };
-const config = (cfg: LogConf) => (conf = { ...conf, ...cfg });
+let conf = { level: 4, filters: [] as string[], maxLen: 10000 };
+const config = (cfg: LogConf = {}) => (conf = { ...conf, ...cfg });
 
 function filter(level: number, args: any) {
   if (conf.level < level) return false;

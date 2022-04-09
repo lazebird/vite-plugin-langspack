@@ -54,8 +54,11 @@ export default function langspack(opt: LangspackOpt): Plugin {
   return {
     name: 'vite-plugin-langspack',
     enforce: 'pre',
-    buildStart() {
+    config(_config, env) {
+      if (!pluginOpt.mode) pluginOpt.mode = env.mode;
+      if (pluginOpt.log?.filters?.length) Log.config({ filters: [] });
       Log.info('vite-plugin-langspack opt %o', pluginOpt);
+      if (pluginOpt.log) Log.config(pluginOpt.log);
       localData = collectData(pluginOpt.lang, pluginOpt.mode ?? '');
     },
     closeBundle() {

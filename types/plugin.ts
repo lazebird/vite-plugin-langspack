@@ -5,8 +5,8 @@ export interface LangOpt {
   name: string;
 }
 export interface LogConf {
-  logLevel?: number;
-  logFilters?: string[];
+  level?: number;
+  filters?: string[];
   maxLen?: number;
 }
 export interface LangspackOpt {
