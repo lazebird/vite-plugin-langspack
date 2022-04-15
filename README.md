@@ -28,6 +28,8 @@ const msgs = await getLocaleData(locale);
 ## Todo
 
 - [x] 去掉配置中的 mode 字段，简化配置
+- [ ] 未使用的key的treeshake
+- [ ] 不同key
 
 ## 问题
 
