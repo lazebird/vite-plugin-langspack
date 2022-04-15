@@ -29,7 +29,7 @@ const msgs = await getLocaleData(locale);
 
 - [x] 去掉配置中的 mode 字段，简化配置
 - [ ] 未使用的key的treeshake
-- [ ] 不同key
+- [ ] 不同key相同翻译内容的合并
 
 ## 问题
 
