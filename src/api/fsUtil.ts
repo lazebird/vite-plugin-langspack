@@ -29,10 +29,8 @@ function getSubdirs(dir: string) {
 }
 
 function file2obj(file: JsonFile, parent: any) {
-  const extname = path.extname(file.path);
-  if (file.path.slice(-extname.length) !== extname) return;
-  const p = file.path.slice(file.path.charAt(0) === '/' ? 1 : 0, -extname.length);
-  for (const d of p.split('/')) {
+  const p = path.parse(file.path);
+  for (const d of [...p.dir.split(path.sep), p.name].filter((f) => f)) {
     if (!parent[d]) parent[d] = {};
     parent = parent[d];
   }
